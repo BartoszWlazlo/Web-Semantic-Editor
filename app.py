@@ -65,68 +65,69 @@ def one_word():
 
 
         classes = list(onto.classes())
-
         def cut_the_class():
             cut_classes = list()
-            for every_class in classes:
-                cut_classes.append(str(every_class).split('.')[1])
+            for each_element in classes:
+                cut_classes.append(str(each_element).split('.')[1])
             return cut_classes
-
         cut_classes_list = cut_the_class()
 
-        individuals = list(onto.individuals())
 
+        individuals = list(onto.individuals())
         def cut_the_individual():
             cut_individuals = list()
-            for every_individual in individuals:
-                cut_individuals.append(str(every_individual).split('.')[1])
+            for each_individual in individuals:
+                cut_individuals.append(str(each_individual).split('.')[1])
             return cut_individuals
-
         cut_individual_list = cut_the_individual()
 
-        cut_the_object_property_list = list(onto.object_properties())
 
+        cut_the_object_property_list = list(onto.object_properties())
         def cut_the_object_property():
             cut_object_property = list()
-            for every_class in cut_the_object_property_list:
-                cut_object_property.append(str(every_class).split('.')[1])
+            for each_relation in cut_the_object_property_list:
+                cut_object_property.append(str(each_relation).split('.')[1])
             return cut_object_property
+
 
         def classes_with_power():
             classes = classes_above_class()
             list_of_classes_with_powers = []
-            for one_class in classes:
-                list_of_classes_with_powers.append(str(len(classes[one_class])) + '.' + one_class)
+            for each_class in classes:
+                list_of_classes_with_powers.append(str(len(classes[each_class])) + '.' + each_class)
             return list_of_classes_with_powers
+
 
         def classes_above_individuals():
             individuals_result = dict()
             classes_above_individuals_result = dict()
-            for one in individuals:
-                cutted_individuals = str(one).split('.')[1]
-                individuals_result[cutted_individuals] = []
-                for two in classes:
-                    cutted_classes = str(two).split('.')[1]
-                    individuals_of = "onto.search(type= onto." + cutted_classes + ")"
-                    if one in eval(individuals_of):
-                        individuals_result[cutted_individuals].append(cutted_classes)
-            for one in individuals_result:
-                classes_above_individuals_result.update({one: individuals_result[one]})
+            for each_individual in individuals:
+                cut_individuals = str(each_individual).split('.')[1]
+                individuals_result[cut_individuals] = []
+                for each_class in classes:
+                    cut_classes = str(each_class).split('.')[1]
+                    individuals_of = "onto.search(type= onto." + cut_classes + ")"
+                    if each_individual in eval(individuals_of):
+                        individuals_result[cut_individuals].append(cut_classes)
+            for each_individual in individuals_result:
+                classes_above_individuals_result.update({each_individual: individuals_result[each_individual]})
             return classes_above_individuals_result
+
 
         def classes_above_class():
             classes_above_class_result = dict()
-            for one in classes:
-                cutted_classes = str(one).split('.')[1]
-                classes_above_class_result[cutted_classes] = []
-                for two in classes:
-                    cutted_classes_2 = str(two).split('.')[1]
-                    classes_of = "onto.search(subclass_of= onto." + cutted_classes_2 + ")"
-                    if one in eval(classes_of):
-                        classes_above_class_result[cutted_classes].append(cutted_classes_2)
-            for one in classes_above_class_result:
-                classes_above_class_result.update({one: classes_above_class_result[one]})
+            for each_class in classes:
+                cut_classes = str(each_class).split('.')[1]
+                classes_above_class_result[cut_classes] = []
+                for each_class2 in classes:
+                    cut_classes2 = str(each_class2).split('.')[1]
+                    classes_of = "onto.search(subclass_of= onto." + cut_classes2 + ")"
+                    if each_class in eval(classes_of):
+                        classes_above_class_result[cut_classes].append(cut_classes2)
+            for each_class in classes_above_class_result:
+                classes_above_class_result.update({each_class: classes_above_class_result[each_class]})
             return classes_above_class_result
+
 
         def sorted_above():
             def comparision():
@@ -136,25 +137,26 @@ def one_word():
                 one_object_classes = (dict_for_going_up[value_from_onclick])
                 list_to_compare = classes_with_power()
                 index = -1
-                for one in one_object_classes:
+                for each_class in one_object_classes:
                     index = index + 1
-                    for two in list_to_compare:
-                        if one == str(two).split('.')[-1]:
-                            one_object_classes[index] = two
+                    for each_element in list_to_compare:
+                        if each_class == str(each_element).split('.')[-1]:
+                            one_object_classes[index] = each_element
                 else:
                     pass
                 return sorted(one_object_classes)
 
-            def updated_hierarchy_of_classes():
-                temp = comparision()
-                i = 0
-                for every in temp:
-                    temp[i] = (str(every).split('.')[-1])
-                    i = i + 1
-                return temp
 
-            result_sorted_above = updated_hierarchy_of_classes()
-            return result_sorted_above
+            def updated_hierarchy_of_classes():
+                sorted_hierarchy = comparision()
+                i = 0
+                for each_element in sorted_hierarchy:
+                    sorted_hierarchy[i] = (str(each_element).split('.')[-1])
+                    i = i + 1
+                return sorted_hierarchy
+            sorted_above_result = updated_hierarchy_of_classes()
+            return sorted_above_result
+
 
         def class_directly_above():
             class_above = sorted_above()
@@ -163,68 +165,63 @@ def one_word():
             else:
                 return class_above[-1]
 
-        print(class_directly_above())
 
         def instances_from_the_same_class():
             class_above = class_directly_above()
-            temp = "onto.search(type= onto." + class_above + ")"
-            temp_evaluated = eval(temp)
+            individuals_of = "onto.search(type= onto." + class_above + ")"
+            eval_individuals_of = eval(individuals_of)
             result = []
-            for every_class in temp_evaluated:
-                if (str(every_class).split('.')[1]) == value_from_onclick:
+            for each_class in eval_individuals_of:
+                if (str(each_class).split('.')[1]) == value_from_onclick:
                     pass
                 else:
-                    result.append(str(every_class).split('.')[1])
+                    result.append(str(each_class).split('.')[1])
             return result
+
 
         def instances_from_the_clicked_class():
             the_class = value_from_onclick
-            temp = "onto.search(type= onto." + the_class + ")"
-            temp_evaluated = eval(temp)
+            individuals_of = "onto.search(type= onto." + the_class + ")"
+            eval_individuals_of = eval(individuals_of)
             result = []
-            for every_class in temp_evaluated:
-                if (str(every_class).split('.')[1]) == value_from_onclick:
+            for each_class in eval_individuals_of:
+                if (str(each_class).split('.')[1]) == value_from_onclick:
                     pass
                 else:
-                    result.append(str(every_class).split('.')[1])
+                    result.append(str(each_class).split('.')[1])
             return result
 
-        all_properties = cut_the_object_property()
-        all_individuals = cut_the_individual()
 
         all_properties = cut_the_object_property()
         all_individuals = cut_the_individual()
-
         def relations():
             list_with_duplicates = list()
-            for every_individual in all_individuals:
-                for every_property in all_properties:
-                    code = "list(onto." + every_individual + "." + every_property + ")"
-                    evaluated_relations = eval(code)
-                    if evaluated_relations == []:
+            for each_individual in all_individuals:
+                for each_property in all_properties:
+                    relations = "list(onto." + each_individual + "." + each_property + ")"
+                    eval_relations = eval(relations)
+                    if eval_relations == []:
                         pass
                     else:
-                        for every in evaluated_relations:
-                            evaluated_relations_split = str(every).split('.')[-1]
-                            concatenation = str(every_individual) + ' ' + str(every_property) + ' ' + str(
-                                evaluated_relations_split)
+                        for each_relation in eval_relations:
+                            eval_relations_split = str(each_relation).split('.')[-1]
+                            concatenation = str(each_individual) + ' ' + str(each_property) + ' ' + str(
+                                eval_relations_split)
                             list_with_duplicates.append(concatenation)
             relations_result = list(set(list_with_duplicates))
             return (relations_result)
 
+
         def classes_below():
-            eval_code = "onto.search(subclass_of= onto." + value_from_onclick + ")"
-            result_of_eval = eval(eval_code)
+            subclasses_of = "onto.search(subclass_of= onto." + value_from_onclick + ")"
+            eval_subclasses_of = eval(subclasses_of)
             list_of_classes_below = list()
-            for each_class in result_of_eval:
+            for each_class in eval_subclasses_of:
                 list_of_classes_below.append(str(each_class).split('.')[1])
             return list_of_classes_below
-
         LIST = []
-
-
-        for every in cut_individual_list:
-            if every == value_from_onclick:
+        for each_element in cut_individual_list:
+            if each_element == value_from_onclick:
                 if_individual_classes_above = sorted_above()
                 LIST.append(if_individual_classes_above)
                 if_individual_twin_individuals = instances_from_the_same_class()
@@ -234,9 +231,8 @@ def one_word():
                 LIST.append(if_individual_relations)
             else:
                 pass
-
-        for every in cut_classes_list:
-            if every == value_from_onclick:
+        for each_element in cut_classes_list:
+            if each_element == value_from_onclick:
                 if_class_classes_above = sorted_above()
                 LIST.append(if_class_classes_above)
                 if_class_classes_below = classes_below()
@@ -245,8 +241,6 @@ def one_word():
                 LIST.append(if_class_individuals_of_this_class)
             else:
                 pass
-
-
         return LIST
 
     ####################################################
@@ -255,16 +249,16 @@ def one_word():
     classes = list(onto.classes())
     def cut_the_class():
         cut_classes = list()
-        for every_class in classes:
-            cut_classes.append(str(every_class).split('.')[1])
+        for each_class in classes:
+            cut_classes.append(str(each_class).split('.')[1])
         return cut_classes
     cut_classes_list = cut_the_class()
     
     individuals = list(onto.individuals())
     def cut_the_individual():
         cut_individuals = list()
-        for every_individual in individuals:
-            cut_individuals.append(str(every_individual).split('.')[1])
+        for each_individual in individuals:
+            cut_individuals.append(str(each_individual).split('.')[1])
         return cut_individuals
     cut_individual_list = cut_the_individual()
 
@@ -310,8 +304,8 @@ def search_all():
     text_nocom_and_dots = text_nocom.replace('.', '')
     text = text_nocom_and_dots.split()
     text_ready_to_use = []
-    for every_word in text:
-        word = every_word
+    for each_word in text:
+        word = each_word
         big_word = word.capitalize()
         text_ready_to_use.append(big_word)
     onto_list_classes_raw = list(onto.classes())
@@ -325,13 +319,13 @@ def search_all():
     onto_list.extend(onto_list_raw)
     onto_list = [str(i) for i in onto_list]
     search_all_resp = []
-    for every in onto_list:
-        search_all_resp.append(str(every).split('.')[1])
+    for each_element in onto_list:
+        search_all_resp.append(str(each_element).split('.')[1])
     search_all_resp2 = list(set(text_ready_to_use).intersection(search_all_resp))
     list_to_swap = []
     index_list = ([i for i, item in enumerate(text_ready_to_use) if item in search_all_resp2])
-    for every_index in index_list:
-        word = text_to_bold[every_index]
+    for each_index in index_list:
+        word = text_to_bold[each_index]
         list_to_swap.append(word)
     response_search_all_list2 = []
     response_search_all_list2.extend(list_to_swap)
