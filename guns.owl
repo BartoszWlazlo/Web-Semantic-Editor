@@ -1,0 +1,409 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/mikolaj/ontologies/2017/10/untitled-ontology-6"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/mikolaj/ontologies/2017/10/untitled-ontology-6">
+    <Prefix name="" IRI="http://www.semanticweb.org/mikolaj/ontologies/2017/10/untitled-ontology-6"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <NamedIndividual IRI="#Model67"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RevolverManufacturedByColt"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#cal45AutoRim"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isCaliberOf"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#cal44Magnum"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#P5"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Model1875"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Cobra"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AutomaticPistol"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RevolverManufacturedBySmithAndWesson"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Anaconda"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#cal9x19mm"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#P22"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PT92"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Revolver"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#cal45Acp"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#cal22LongRifle"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Diamondback"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PistolManufacturedByWalther"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#cal38Special"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RevolverManufacturedByRemington"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#cal44Remington"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#cal460Magnum"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PT1911"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Model625"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#cal31"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Gun"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#cal44Special"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PistolManufacturedByTaurus"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CCP"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#cal45Colt"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PT247"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasCaliber"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Pistol"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#M1877"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Caliber"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#cal22LR"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#AutomaticPistol"/>
+        <Class IRI="#Pistol"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Caliber"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#isCaliberOf"/>
+            <Class IRI="#Gun"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Gun"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#hasCaliber"/>
+            <Class IRI="#Caliber"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Pistol"/>
+        <Class IRI="#Gun"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PistolManufacturedByTaurus"/>
+        <Class IRI="#AutomaticPistol"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PistolManufacturedByWalther"/>
+        <Class IRI="#AutomaticPistol"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Revolver"/>
+        <Class IRI="#Pistol"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RevolverManufacturedByColt"/>
+        <Class IRI="#Revolver"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RevolverManufacturedByRemington"/>
+        <Class IRI="#Revolver"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RevolverManufacturedBySmithAndWesson"/>
+        <Class IRI="#Revolver"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#RevolverManufacturedByColt"/>
+        <NamedIndividual IRI="#Anaconda"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PistolManufacturedByWalther"/>
+        <NamedIndividual IRI="#CCP"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RevolverManufacturedByColt"/>
+        <NamedIndividual IRI="#Cobra"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RevolverManufacturedByColt"/>
+        <NamedIndividual IRI="#Diamondback"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RevolverManufacturedByColt"/>
+        <NamedIndividual IRI="#M1877"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RevolverManufacturedByRemington"/>
+        <NamedIndividual IRI="#Model1875"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RevolverManufacturedBySmithAndWesson"/>
+        <NamedIndividual IRI="#Model625"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RevolverManufacturedBySmithAndWesson"/>
+        <NamedIndividual IRI="#Model67"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PistolManufacturedByWalther"/>
+        <NamedIndividual IRI="#P22"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PistolManufacturedByWalther"/>
+        <NamedIndividual IRI="#P5"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PistolManufacturedByTaurus"/>
+        <NamedIndividual IRI="#PT1911"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PistolManufacturedByTaurus"/>
+        <NamedIndividual IRI="#PT247"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PistolManufacturedByTaurus"/>
+        <NamedIndividual IRI="#PT92"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Caliber"/>
+        <NamedIndividual IRI="#cal22LR"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Caliber"/>
+        <NamedIndividual IRI="#cal22LongRifle"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Caliber"/>
+        <NamedIndividual IRI="#cal31"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Caliber"/>
+        <NamedIndividual IRI="#cal38Special"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Caliber"/>
+        <NamedIndividual IRI="#cal44Magnum"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Caliber"/>
+        <NamedIndividual IRI="#cal44Remington"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Caliber"/>
+        <NamedIndividual IRI="#cal44Special"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Caliber"/>
+        <NamedIndividual IRI="#cal45Acp"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Caliber"/>
+        <NamedIndividual IRI="#cal45AutoRim"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Caliber"/>
+        <NamedIndividual IRI="#cal45Colt"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Caliber"/>
+        <NamedIndividual IRI="#cal460Magnum"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Caliber"/>
+        <NamedIndividual IRI="#cal9x19mm"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isCaliberOf"/>
+        <NamedIndividual IRI="#cal22LR"/>
+        <NamedIndividual IRI="#Cobra"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isCaliberOf"/>
+        <NamedIndividual IRI="#cal22LR"/>
+        <NamedIndividual IRI="#Diamondback"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isCaliberOf"/>
+        <NamedIndividual IRI="#cal22LongRifle"/>
+        <NamedIndividual IRI="#P22"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isCaliberOf"/>
+        <NamedIndividual IRI="#cal31"/>
+        <NamedIndividual IRI="#M1877"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isCaliberOf"/>
+        <NamedIndividual IRI="#cal38Special"/>
+        <NamedIndividual IRI="#Cobra"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isCaliberOf"/>
+        <NamedIndividual IRI="#cal38Special"/>
+        <NamedIndividual IRI="#Diamondback"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isCaliberOf"/>
+        <NamedIndividual IRI="#cal38Special"/>
+        <NamedIndividual IRI="#M1877"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isCaliberOf"/>
+        <NamedIndividual IRI="#cal38Special"/>
+        <NamedIndividual IRI="#Model67"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isCaliberOf"/>
+        <NamedIndividual IRI="#cal44Magnum"/>
+        <NamedIndividual IRI="#Anaconda"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isCaliberOf"/>
+        <NamedIndividual IRI="#cal44Remington"/>
+        <NamedIndividual IRI="#Model1875"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isCaliberOf"/>
+        <NamedIndividual IRI="#cal44Special"/>
+        <NamedIndividual IRI="#Anaconda"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isCaliberOf"/>
+        <NamedIndividual IRI="#cal45Acp"/>
+        <NamedIndividual IRI="#Model625"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isCaliberOf"/>
+        <NamedIndividual IRI="#cal45Acp"/>
+        <NamedIndividual IRI="#PT1911"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isCaliberOf"/>
+        <NamedIndividual IRI="#cal45Acp"/>
+        <NamedIndividual IRI="#PT247"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isCaliberOf"/>
+        <NamedIndividual IRI="#cal45AutoRim"/>
+        <NamedIndividual IRI="#Model625"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isCaliberOf"/>
+        <NamedIndividual IRI="#cal45Colt"/>
+        <NamedIndividual IRI="#Anaconda"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isCaliberOf"/>
+        <NamedIndividual IRI="#cal45Colt"/>
+        <NamedIndividual IRI="#Model1875"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isCaliberOf"/>
+        <NamedIndividual IRI="#cal460Magnum"/>
+        <NamedIndividual IRI="#Anaconda"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isCaliberOf"/>
+        <NamedIndividual IRI="#cal9x19mm"/>
+        <NamedIndividual IRI="#CCP"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isCaliberOf"/>
+        <NamedIndividual IRI="#cal9x19mm"/>
+        <NamedIndividual IRI="#P5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isCaliberOf"/>
+        <NamedIndividual IRI="#cal9x19mm"/>
+        <NamedIndividual IRI="#PT247"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isCaliberOf"/>
+        <NamedIndividual IRI="#cal9x19mm"/>
+        <NamedIndividual IRI="#PT92"/>
+    </ObjectPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasCaliber"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isCaliberOf"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasCaliber"/>
+        <ObjectProperty IRI="#isCaliberOf"/>
+    </InverseObjectProperties>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#hasCaliber"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#isCaliberOf"/>
+    </AsymmetricObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isCaliberOf"/>
+        <Class IRI="#Caliber"/>
+    </ObjectPropertyDomain>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

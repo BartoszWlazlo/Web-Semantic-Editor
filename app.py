@@ -318,19 +318,19 @@ def search_all():
     onto_list = []
     onto_list.extend(onto_list_raw)
     onto_list = [str(i) for i in onto_list]
-    search_all_resp = []
+    onto_list_str = []
     for each_element in onto_list:
-        search_all_resp.append(str(each_element).split('.')[1])
-    search_all_resp2 = list(set(text_ready_to_use).intersection(search_all_resp))
+        onto_list_str.append(str(each_element).split('.')[1])
+    found_words = list(set(text_ready_to_use).intersection(onto_list_str))
     list_to_swap = []
-    index_list = ([i for i, item in enumerate(text_ready_to_use) if item in search_all_resp2])
+    index_list = ([i for i, item in enumerate(text_ready_to_use) if item in found_words])
     for each_index in index_list:
         word = text_to_bold[each_index]
         list_to_swap.append(word)
-    response_search_all_list2 = []
-    response_search_all_list2.extend(list_to_swap)
-    response_search_all_list2 = [str(i) for i in response_search_all_list2]
-    return jsonify(search_all_response=response_search_all_list2)
+    search_all_result = []
+    search_all_result.extend(list_to_swap)
+    search_all_result = [str(i) for i in search_all_result]
+    return jsonify(search_all_response=search_all_result)
 
 
 if __name__ == "__main__":

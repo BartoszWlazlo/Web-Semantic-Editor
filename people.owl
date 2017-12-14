@@ -1,0 +1,225 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/mikolaj/ontologies/2017/11/untitled-ontology-9#"
+     xml:base="http://www.semanticweb.org/mikolaj/ontologies/2017/11/untitled-ontology-9"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:untitled-ontology-9="http://www.semanticweb.org/mikolaj/ontologies/2017/11/untitled-ontology-9#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/mikolaj/ontologies/2017/11/untitled-ontology-9"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/mikolaj/ontologies/2017/11/untitled-ontology-9#has_gender -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mikolaj/ontologies/2017/11/untitled-ontology-9#has_gender">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/mikolaj/ontologies/2017/11/untitled-ontology-9#is_gender_of"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mikolaj/ontologies/2017/11/untitled-ontology-9#has_husband -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mikolaj/ontologies/2017/11/untitled-ontology-9#has_husband">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/mikolaj/ontologies/2017/11/untitled-ontology-9#has_wife"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mikolaj/ontologies/2017/11/untitled-ontology-9#has_wife -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mikolaj/ontologies/2017/11/untitled-ontology-9#has_wife"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mikolaj/ontologies/2017/11/untitled-ontology-9#is_gender_of -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mikolaj/ontologies/2017/11/untitled-ontology-9#is_gender_of">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mikolaj/ontologies/2017/11/untitled-ontology-9#knows -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mikolaj/ontologies/2017/11/untitled-ontology-9#knows"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/mikolaj/ontologies/2017/11/untitled-ontology-9#Person -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mikolaj/ontologies/2017/11/untitled-ontology-9#Person">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/mikolaj/ontologies/2017/11/untitled-ontology-9#has_gender"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/mikolaj/ontologies/2017/11/untitled-ontology-9#Sex"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/mikolaj/ontologies/2017/11/untitled-ontology-9#has_husband"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/mikolaj/ontologies/2017/11/untitled-ontology-9#Person"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/mikolaj/ontologies/2017/11/untitled-ontology-9#has_wife"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/mikolaj/ontologies/2017/11/untitled-ontology-9#Person"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mikolaj/ontologies/2017/11/untitled-ontology-9#Sex -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mikolaj/ontologies/2017/11/untitled-ontology-9#Sex">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/mikolaj/ontologies/2017/11/untitled-ontology-9#is_gender_of"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/mikolaj/ontologies/2017/11/untitled-ontology-9#Person"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/mikolaj/ontologies/2017/11/untitled-ontology-9#Anna -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mikolaj/ontologies/2017/11/untitled-ontology-9#Anna">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mikolaj/ontologies/2017/11/untitled-ontology-9#Person"/>
+        <has_gender rdf:resource="http://www.semanticweb.org/mikolaj/ontologies/2017/11/untitled-ontology-9#Female"/>
+        <has_husband rdf:resource="http://www.semanticweb.org/mikolaj/ontologies/2017/11/untitled-ontology-9#John"/>
+        <knows rdf:resource="http://www.semanticweb.org/mikolaj/ontologies/2017/11/untitled-ontology-9#Bob"/>
+        <knows rdf:resource="http://www.semanticweb.org/mikolaj/ontologies/2017/11/untitled-ontology-9#Chris"/>
+        <knows rdf:resource="http://www.semanticweb.org/mikolaj/ontologies/2017/11/untitled-ontology-9#John"/>
+        <knows rdf:resource="http://www.semanticweb.org/mikolaj/ontologies/2017/11/untitled-ontology-9#Rick"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mikolaj/ontologies/2017/11/untitled-ontology-9#Bob -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mikolaj/ontologies/2017/11/untitled-ontology-9#Bob">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mikolaj/ontologies/2017/11/untitled-ontology-9#Person"/>
+        <has_gender rdf:resource="http://www.semanticweb.org/mikolaj/ontologies/2017/11/untitled-ontology-9#Male"/>
+        <knows rdf:resource="http://www.semanticweb.org/mikolaj/ontologies/2017/11/untitled-ontology-9#Anna"/>
+        <knows rdf:resource="http://www.semanticweb.org/mikolaj/ontologies/2017/11/untitled-ontology-9#Jane"/>
+        <knows rdf:resource="http://www.semanticweb.org/mikolaj/ontologies/2017/11/untitled-ontology-9#John"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mikolaj/ontologies/2017/11/untitled-ontology-9#Chris -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mikolaj/ontologies/2017/11/untitled-ontology-9#Chris">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mikolaj/ontologies/2017/11/untitled-ontology-9#Person"/>
+        <has_gender rdf:resource="http://www.semanticweb.org/mikolaj/ontologies/2017/11/untitled-ontology-9#Male"/>
+        <knows rdf:resource="http://www.semanticweb.org/mikolaj/ontologies/2017/11/untitled-ontology-9#Anna"/>
+        <knows rdf:resource="http://www.semanticweb.org/mikolaj/ontologies/2017/11/untitled-ontology-9#Rick"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mikolaj/ontologies/2017/11/untitled-ontology-9#David -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mikolaj/ontologies/2017/11/untitled-ontology-9#David">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mikolaj/ontologies/2017/11/untitled-ontology-9#Person"/>
+        <has_gender rdf:resource="http://www.semanticweb.org/mikolaj/ontologies/2017/11/untitled-ontology-9#Male"/>
+        <knows rdf:resource="http://www.semanticweb.org/mikolaj/ontologies/2017/11/untitled-ontology-9#Jane"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mikolaj/ontologies/2017/11/untitled-ontology-9#Female -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mikolaj/ontologies/2017/11/untitled-ontology-9#Female">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mikolaj/ontologies/2017/11/untitled-ontology-9#Sex"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mikolaj/ontologies/2017/11/untitled-ontology-9#Jane -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mikolaj/ontologies/2017/11/untitled-ontology-9#Jane">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mikolaj/ontologies/2017/11/untitled-ontology-9#Person"/>
+        <has_gender rdf:resource="http://www.semanticweb.org/mikolaj/ontologies/2017/11/untitled-ontology-9#Female"/>
+        <knows rdf:resource="http://www.semanticweb.org/mikolaj/ontologies/2017/11/untitled-ontology-9#Bob"/>
+        <knows rdf:resource="http://www.semanticweb.org/mikolaj/ontologies/2017/11/untitled-ontology-9#David"/>
+        <knows rdf:resource="http://www.semanticweb.org/mikolaj/ontologies/2017/11/untitled-ontology-9#John"/>
+        <knows rdf:resource="http://www.semanticweb.org/mikolaj/ontologies/2017/11/untitled-ontology-9#Rick"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mikolaj/ontologies/2017/11/untitled-ontology-9#John -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mikolaj/ontologies/2017/11/untitled-ontology-9#John">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mikolaj/ontologies/2017/11/untitled-ontology-9#Person"/>
+        <has_gender rdf:resource="http://www.semanticweb.org/mikolaj/ontologies/2017/11/untitled-ontology-9#Male"/>
+        <knows rdf:resource="http://www.semanticweb.org/mikolaj/ontologies/2017/11/untitled-ontology-9#Anna"/>
+        <knows rdf:resource="http://www.semanticweb.org/mikolaj/ontologies/2017/11/untitled-ontology-9#Rick"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mikolaj/ontologies/2017/11/untitled-ontology-9#Male -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mikolaj/ontologies/2017/11/untitled-ontology-9#Male">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mikolaj/ontologies/2017/11/untitled-ontology-9#Sex"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mikolaj/ontologies/2017/11/untitled-ontology-9#Rick -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mikolaj/ontologies/2017/11/untitled-ontology-9#Rick">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mikolaj/ontologies/2017/11/untitled-ontology-9#Person"/>
+        <has_gender rdf:resource="http://www.semanticweb.org/mikolaj/ontologies/2017/11/untitled-ontology-9#Male"/>
+        <knows rdf:resource="http://www.semanticweb.org/mikolaj/ontologies/2017/11/untitled-ontology-9#Chris"/>
+        <knows rdf:resource="http://www.semanticweb.org/mikolaj/ontologies/2017/11/untitled-ontology-9#Jane"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
