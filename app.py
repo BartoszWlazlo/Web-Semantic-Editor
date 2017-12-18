@@ -11,12 +11,12 @@ def index():
 @app.route("/LOAD_ONTOLOGY_1_IN_BACKEND")
 def LOAD_ONTOLOGY_1_FROM_BACKEND():
     global onto
-    onto = get_ontology("file://D:/INZ/people.owl").load()
+    onto = get_ontology("file://people.owl").load()
 
 @app.route("/LOAD_ONTOLOGY_2_IN_BACKEND")
 def LOAD_ONTOLOGY_2_FROM_BACKEND():
     global onto
-    onto = get_ontology("file://D:/INZ/guns.owl").load()
+    onto = get_ontology("file://guns.owl").load()
 
 
 @app.route('/DISP_ALL_CLASSES')
@@ -253,7 +253,7 @@ def one_word():
             cut_classes.append(str(each_class).split('.')[1])
         return cut_classes
     cut_classes_list = cut_the_class()
-    
+
     individuals = list(onto.individuals())
     def cut_the_individual():
         cut_individuals = list()
