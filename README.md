@@ -1,5 +1,4 @@
-## Do the fallowing steps in order to use app.
-
+# Web-Semantic-Editor-BACKEND
 ### 1.Install:
 
 * [Python](https://www.python.org) - 3.X version
