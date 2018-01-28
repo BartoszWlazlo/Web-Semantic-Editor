@@ -1,13 +1,13 @@
 # Web-Semantic-Editor-BACKEND
-### 1.Install:
+### 1. Install:
 
 * [Python](https://www.python.org) - 3.X version
 
-### 2.Download all files from repository.
+### 2. Download all files from repository.
 
-### 3.Open CMD-Commend Line as Administrator.
+### 3. Open CMD-Commend Line as Administrator.
 
-### 4.Write:
+### 4. Write:
 ```
 pip install flask  
 ```
@@ -18,10 +18,10 @@ pip install owlready2
 pip install nltk
 ```
 
-### 5.Go to directiory of app.py for example:
+### 5. Go to directiory of app.py for example:
 C:\Users\USER\Documents\GitHub\Web-Semantic-Editor-BACKEND
 
-### 6.Write:
+### 6. Write:
 ```
 python app.py
 ```
