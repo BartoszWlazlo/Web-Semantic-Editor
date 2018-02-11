@@ -16,6 +16,7 @@ pip install owlready2
 ```
 ```
 pip install nltk
+python
 import nltk
 nltk.download()
 ```
