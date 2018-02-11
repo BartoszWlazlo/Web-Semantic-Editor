@@ -1,7 +1,7 @@
 # Web-Semantic-Editor-BACKEND
 ### 1. Install:
 
-* [Python](https://www.python.org) - 3.X version
+* [Python](https://www.python.org) - 3.5.X version
 
 ### 2. Download all files from repository.
 
