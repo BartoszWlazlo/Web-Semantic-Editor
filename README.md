@@ -16,6 +16,8 @@ pip install owlready2
 ```
 ```
 pip install nltk
+import nltk
+nltk.download()
 ```
 
 ### 5. Go to directiory of app.py for example:
