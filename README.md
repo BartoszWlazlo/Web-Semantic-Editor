@@ -1,4 +1,4 @@
-# Web-Semantic-Editor-BACKEND
+# Web Semantic Editor
 A student project which target was creating a text editor with context menu and modules to it like: text statistics, speech parts, synonyms.
 
 **GUI**
