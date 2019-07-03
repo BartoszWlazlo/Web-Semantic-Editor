@@ -1,4 +1,13 @@
 # Web-Semantic-Editor-BACKEND
+A student project which target was creating a text editor with context menu and modules to it like: text statistics, speech parts, synonyms.
+
+**GUI**
+![alt text](https://github.com/BartoszWlazlo/Web-Semantic-Editor/tree/master/readme/GUI.png)
+**Text modifications after turning text analysis**
+![alt text](https://github.com/BartoszWlazlo/Web-Semantic-Editor/tree/master/readme/output1.png)
+**Examples of found ontologies**
+![alt text](https://github.com/BartoszWlazlo/Web-Semantic-Editor/tree/master/readme/outputlist.png)
+
 ### 1. Install:
 
 * [Python](https://www.python.org) - 3.5.X version
