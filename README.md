@@ -4,7 +4,7 @@ A student project which target was creating a text editor with context menu and 
 **GUI**
 ![alt text](https://github.com/BartoszWlazlo/Web-Semantic-Editor/blob/master/readme/GUI.png)
 **Text modifications after turning text analysis**
-![alt text](https://github.com/BartoszWlazlo/Web-Semantic-Editor/blob/master/readme/GUI.png)
+![alt text](https://github.com/BartoszWlazlo/Web-Semantic-Editor/blob/master/readme/output1.png)
 **Examples of found ontologies**
 ![alt text](https://github.com/BartoszWlazlo/Web-Semantic-Editor/blob/master/readme/outputlist.png)
 
